@@ -1,0 +1,55 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tira_app/constants/colors.dart';
+
+class UploadWidget extends StatelessWidget {
+  String label;
+  String image;
+  String imageLabel;
+
+  UploadWidget({
+    required this.label,
+    required this.image,
+    required this.imageLabel,
+    Key? key,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 18.sp,
+            // fontWeight: FontWeight.bold,
+            color: secondColor,
+          ),
+        ),
+        Container(
+          height: 130.h,
+          width: 375.w,
+          decoration: BoxDecoration(
+              color: Color.fromRGBO(218, 89, 59, 0.20),
+              border: Border.all(
+                color: mainColor,
+              ),
+              borderRadius: BorderRadius.circular(15)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(image),
+              Text(
+                imageLabel,
+                style: TextStyle(color: Colors.black45, fontSize: 15.sp),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
