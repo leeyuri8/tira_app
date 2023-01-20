@@ -111,7 +111,7 @@ class Settings extends StatelessWidget {
                         Text(
                           'Aa',
                           style: TextStyle(
-                              fontSize: 20.sp,
+                              fontSize: 22.sp,
                               color: mainColor,
                               fontWeight: FontWeight.bold),
                         ),

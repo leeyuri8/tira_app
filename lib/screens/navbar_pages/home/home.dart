@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tira_app/controllers/navbar_controller.dart';
 import 'package:tira_app/screens/navbar_pages/home/call/call.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/drawer.dart';
+import 'package:tira_app/screens/navbar_pages/home/search_screen.dart';
 import 'package:tira_app/screens/navbar_pages/myorders/my_orders.dart';
 import 'package:tira_app/screens/navbar_pages/notification/notifications.dart';
 import 'package:tira_app/screens/navbar_pages/profile.dart';
@@ -33,14 +34,17 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: mainColor,
         elevation: 0,
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.only(
               left: 18,
             ),
-            child: Icon(
-              Icons.search,
-              size: 25,
+            child: GestureDetector(
+              onTap: (() => Get.to(() => SearchScreen())),
+              child: Icon(
+                Icons.search,
+                size: 25,
+              ),
             ),
           ),
         ],
@@ -52,9 +56,14 @@ class HomeScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         )),
-        // leading: const Padding(
-        //   padding: EdgeInsets.only(right: 10),
-        //   child: Icon(Icons.menu),
+        leading: Builder(builder: (BuildContext context) {
+          return IconButton(
+            icon: Image.asset('assets/images/menu.png'),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          );
+        }),
+
         // ),
       ),
       body: SingleChildScrollView(

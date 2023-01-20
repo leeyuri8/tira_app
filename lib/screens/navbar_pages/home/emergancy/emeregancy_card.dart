@@ -56,7 +56,9 @@ class Caard {
 
 List<Caard> cards = <Caard>[
   Caard('assets/images/fire.png', 'إنذارات الحرائق', 'assets/images/back.png',
-      () {}),
+      () {
+        
+      }),
   Caard('assets/images/tornado.png', 'إنذارات الطقس و الفيضانات',
       'assets/images/back.png', () {}),
   Caard(

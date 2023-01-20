@@ -7,7 +7,7 @@ import 'package:tira_app/constants/colors.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/change_pass.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/privacy_policy.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/settings.dart';
-import 'package:tira_app/screens/navbar_pages/home/drawer/stores.dart';
+import 'package:tira_app/screens/navbar_pages/home/drawer/stores/stores.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/technical_support.dart';
 import 'package:tira_app/screens/navbar_pages/profile.dart';
 import 'package:tira_app/widgets/button.dart';
@@ -20,6 +20,7 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Drawer(
+        
         child: ListView(
           padding: EdgeInsets.zero,
           children: [

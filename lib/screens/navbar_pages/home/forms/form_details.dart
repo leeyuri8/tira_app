@@ -21,7 +21,7 @@ class FormDetails extends StatelessWidget {
     // formController.formValue == true?
 
     return Scaffold(
-      body: ListView(
+      body: Column(
         children: [
           AppBarr(
             title: 'الاستمارات',

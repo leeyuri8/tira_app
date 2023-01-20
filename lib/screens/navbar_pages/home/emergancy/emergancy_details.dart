@@ -1,13 +1,14 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class Stores extends StatelessWidget {
-  const Stores({super.key});
+class EmergancyDetails extends StatelessWidget {
+  const EmergancyDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+
     );
   }
 }
