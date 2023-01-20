@@ -9,19 +9,27 @@ import '../constants/colors.dart';
 class DividerWidget extends StatelessWidget {
   String image;
   String title;
+  VoidCallback onPressed;
 
-  DividerWidget({required this.image, required this.title, Key? key})
+  DividerWidget(
+      {required this.image,
+      required this.title,
+      required this.onPressed,
+      Key? key})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ListTile(
-          leading: Image.asset(image),
-          title: Text(
-            title,
-            style: TextStyle(fontSize: 20.sp),
+        GestureDetector(
+          onTap: onPressed,
+          child: ListTile(
+            leading: Image.asset(image),
+            title: Text(
+              title,
+              style: TextStyle(fontSize: 20.sp),
+            ),
           ),
         ),
         Divider(

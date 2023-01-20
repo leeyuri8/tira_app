@@ -62,7 +62,8 @@ class RegisterCon extends StatelessWidget {
               Image.asset('assets/images/google.png'),
               Image.asset('assets/images/facebook.png')
             ],
-          )
+          ),
+          
         ],
       ),
     );

@@ -25,6 +25,7 @@ class Agenda extends StatelessWidget {
               onTap: () => Get.back(),
             ),
             leading: SizedBox(),
+            
           ),
           ContainerBody(
             widget: Padding(

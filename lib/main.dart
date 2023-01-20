@@ -40,7 +40,8 @@ class MyApp extends StatelessWidget {
               initialBinding: SplashBinding(),
               initialRoute: AppRoutes.splash,
               home: Splash());
-        }));
+        })
+        );
   }
 }
 

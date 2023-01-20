@@ -29,7 +29,8 @@ class CitizenService extends StatelessWidget {
           ContainerBody(
               widget: Container(
             padding: EdgeInsets.all(15),
-            child: Column(children: [
+            child: Column(
+              children: [
               Text(
                 'يمكنكم التواصل مع خدمة العملاء عبر رسائل التطبيق أو بالاتصال على أرقامنا المدرجة في الأسفل ',
                 style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w500),
