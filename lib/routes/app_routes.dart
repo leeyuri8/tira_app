@@ -7,5 +7,16 @@ class AppRoutes {
   static const auth = '/auth';
   static const check1 = '/check1';
   static const check2 = '/check2';
+
+  //new 
+  static const services = '/services';
+  static const servicesDetails = '/servicesDetails';
+  static const servicesForm = '/servicesForm';
+  static const myOrders = '/myORders';
+  static const orderDetail = '/orderDetail';
+  static const notes = '/notes';
+  static const news = '/news';
+  
+  
   // static const
 }

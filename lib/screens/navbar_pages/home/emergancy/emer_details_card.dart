@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tira_app/constants/colors.dart';
-import 'package:tira_app/constants/font_manager.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 
 class EmerDetailsCard extends StatelessWidget {
   Row row;
@@ -15,6 +15,7 @@ class EmerDetailsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(7),
       padding: EdgeInsets.all(8),
       width: 376.w,
       height: 170.26.h,
@@ -22,7 +23,9 @@ class EmerDetailsCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.r),
           color: white,
           boxShadow: [
-            BoxShadow(color: Color.fromRGBO(88, 88, 88, 0.48), blurRadius: 10.r)
+            BoxShadow(
+              color: Color.fromRGBO(88, 88, 88, 0.48),
+               blurRadius: 10.r)
           ]),
       child: Column(
         children: [

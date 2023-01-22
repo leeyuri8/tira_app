@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 
 class ReportsCard extends StatelessWidget {
   const ReportsCard({super.key});

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 
 class NotificationCard extends StatelessWidget {
   const NotificationCard({super.key});

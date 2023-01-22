@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tira_app/widgets/bottomCont.dart';
 

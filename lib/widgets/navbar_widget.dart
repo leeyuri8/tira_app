@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/controllers/navbar_controller.dart';
 import 'package:tira_app/main.dart';
 import 'package:tira_app/screens/navbar_pages/home/home.dart';
@@ -25,7 +25,6 @@ class NavBarWidget extends StatelessWidget {
     required this.image,
     // required this.widget,
     required this.onPressed,
-    
     Key? key,
   }) : super(key: key);
 
@@ -54,13 +53,13 @@ class NavBarWidget extends StatelessWidget {
         children: [
           Icon(
             image,
-            size: 26.h,
+            size: 25.h,
             color: HexColor('#898989'),
           ),
           Text(
             text,
             style: TextStyle(
-              fontSize: 18.sp,
+              fontSize: 14.sp,
               color: HexColor('#898989'),
             ),
           ),

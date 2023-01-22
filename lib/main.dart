@@ -5,7 +5,7 @@ import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/controllers/navbar_controller.dart';
 import 'package:tira_app/controllers/splash_controller.dart';
 import 'package:tira_app/routes/app_routes.dart';

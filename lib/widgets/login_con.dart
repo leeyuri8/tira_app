@@ -4,7 +4,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 import 'package:tira_app/routes/app_routes.dart';
 import 'package:tira_app/widgets/button.dart';
 
@@ -22,14 +23,15 @@ class LoginCon extends StatelessWidget {
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
               hintText: 'رقم الهاتف / الهوية الشخصية',
-              hintStyle: TextStyle(fontSize: 15.sp, color: secondColor),
+              hintStyle: TextStyle(fontSize: FontSize.s16, color: secondColor),
             ),
           ),
           TextField(
             obscureText: true,
             decoration: InputDecoration(
                 hintText: 'كلمة المرور',
-                hintStyle: TextStyle(fontSize: 15.sp, color: secondColor),
+                hintStyle:
+                    TextStyle(fontSize: FontSize.s16, color: secondColor),
                 suffixIcon: Icon(Icons.remove_red_eye_outlined)),
           ),
           Padding(

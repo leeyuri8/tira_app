@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/screens/navbar_pages/home/emergancy/emeregancy_card.dart';
 import 'package:tira_app/widgets/appbar.dart';
 import 'package:tira_app/widgets/button.dart';
@@ -19,7 +19,10 @@ class Emergancy extends StatelessWidget {
       AppBarr(
         title: 'الإنذار و الطوارئ',
         actions: GestureDetector(
-          child: Icon(Icons.arrow_forward),
+          child: Icon(
+            Icons.arrow_forward_ios,
+            size: 20,
+          ),
           onTap: () => Get.back(),
         ),
         leading: SizedBox(),

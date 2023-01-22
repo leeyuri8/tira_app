@@ -4,7 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 import 'package:tira_app/screens/navbar_pages/home/polls/polls_details.dart';
 
 class PollsCard extends StatelessWidget {
@@ -32,7 +33,9 @@ class PollsCard extends StatelessWidget {
               children: [
                 Text(
                   'إقامة مهرجان ثقافي لدعم ذوي الاحتياجات الخاصة',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: FontSize.s18,
+                      fontWeight: FontWeightManager.medium),
                 ),
                 Image.asset('assets/images/meen.png')
               ],
@@ -50,7 +53,8 @@ class PollsCard extends StatelessWidget {
             Text(
               'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد ',
               maxLines: 2,
-              style: TextStyle(color: HexColor('#757575'), fontSize: 18.sp),
+              style:
+                  TextStyle(color: HexColor('#757575'), fontSize: FontSize.s16),
             ),
             Center(
               child: ElevatedButton(
@@ -59,12 +63,13 @@ class PollsCard extends StatelessWidget {
                 },
                 child: Text(
                   'قم بالاستطلاع',
-                  style: TextStyle(color: mainColor, fontSize: 20.sp),
+                  style: TextStyle(color: mainColor, fontSize: FontSize.s14),
                 ),
                 style: ElevatedButton.styleFrom(
-                    fixedSize: Size(140.w, 31.h),
+                    fixedSize: Size(131.w, 31.h),
                     backgroundColor: white,
-                    side: BorderSide(color: mainColor, width: 1.6.w)),
+                    
+                    side: BorderSide(color: mainColor, width: 1.5.w)),
               ),
             ),
             Row(

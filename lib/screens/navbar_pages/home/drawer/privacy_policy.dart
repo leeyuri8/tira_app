@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/widgets/appbar.dart';
 import 'package:tira_app/widgets/container_body.dart';
 
@@ -19,7 +19,7 @@ class PrivacyPolicy extends StatelessWidget {
               AppBarr(
                 title: 'سياسة الخصوصية',
                 actions: GestureDetector(
-                  child: Icon(Icons.arrow_forward),
+                  child: Icon(Icons.arrow_forward_ios),
                   onTap: () => Get.back(),
                 ),
                 leading: SizedBox(),

@@ -3,7 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 import 'package:tira_app/screens/navbar_pages/home/call/call_card.dart';
 import 'package:tira_app/widgets/appbar.dart';
 import 'package:tira_app/widgets/container_body.dart';
@@ -18,7 +19,10 @@ class CallScreen extends StatelessWidget {
       AppBarr(
         title: 'إتصال بالموكيد',
         actions: GestureDetector(
-          child: Icon(Icons.arrow_forward),
+          child: Icon(
+            Icons.arrow_forward_ios,
+            size: 20,
+          ),
           onTap: () => Get.back(),
         ),
         leading: SizedBox(),
@@ -43,15 +47,15 @@ class CallScreen extends StatelessWidget {
                   children: [
                     Image.asset(
                       'assets/images/phone.png',
-                      width: 25,
-                      height: 25,
+                      width: 25.w,
+                      height: 25.h,
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 10.w,
                     ),
                     Text(
                       'إتصال بالموكيد',
-                      style: TextStyle(fontSize: 22.sp, color: white),
+                      style: TextStyle(fontSize: FontSize.s22, color: white),
                     ),
                   ],
                 ),
@@ -59,14 +63,16 @@ class CallScreen extends StatelessWidget {
             ),
             Divider(
               color: mainColor,
-              height: 1,
+              height: 1.h,
               thickness: 1,
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 15, right: 15),
+              padding: EdgeInsets.only(top: 15.h, right: 15.w),
               child: Text(
                 'التقارير \n الرجاء تحديد نوع التقرير',
-                style: TextStyle(fontSize: 20.sp),
+                style: TextStyle(
+                    fontSize: FontSize.s20,
+                    fontWeight: FontWeightManager.medium),
               ),
             ),
             ListView(

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/controllers/auth_controller.dart';
 import 'package:tira_app/controllers/home_controller.dart';
 import 'package:tira_app/screens/auth/check/check.dart';
 import 'package:tira_app/widgets/button.dart';
-import 'package:tira_app/widgets/auth_container.dart';
+import 'package:tira_app/screens/auth/auth_container.dart';
 import 'package:tira_app/widgets/login_con.dart';
 import 'package:tira_app/widgets/register_con.dart';
 import 'package:tira_app/widgets/topBar.dart';

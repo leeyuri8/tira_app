@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/screens/navbar_pages/reports/search_bar.dart';
 import 'package:tira_app/screens/navbar_pages/reports/reports_card.dart';
 import 'package:tira_app/screens/navbar_pages/reports/reports_row.dart';

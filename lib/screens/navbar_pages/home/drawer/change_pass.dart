@@ -20,7 +20,7 @@ class ChangePass extends StatelessWidget {
               AppBarr(
                 title: 'تغيير كلمة المرور',
                 actions: GestureDetector(
-                  child: Icon(Icons.arrow_forward),
+                  child: Icon(Icons.arrow_forward_ios),
                   onTap: () => Get.back(),
                 ),
                 leading: SizedBox(),

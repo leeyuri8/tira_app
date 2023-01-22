@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/screens/navbar_pages/home/agenda/agenda.dart';
 import 'package:tira_app/screens/navbar_pages/home/citizen_service.dart';
 import 'package:tira_app/screens/navbar_pages/home/complaints.dart';
@@ -28,11 +28,11 @@ class MainCard extends StatelessWidget {
         // width: 125.w,
         // height: 125.h,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
             color: white,
             boxShadow: [
               BoxShadow(
-                  blurRadius: 3, offset: Offset(0, 3), color: Colors.grey),
+                  blurRadius: 3.r, offset: Offset(0, 3.h), color: Colors.grey),
             ]),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           SizedBox(height: 80.h, child: Image.asset(category.image)),

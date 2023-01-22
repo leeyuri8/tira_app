@@ -4,7 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 import 'package:tira_app/screens/navbar_pages/home/forms/form_details.dart';
 
 import '../../myorders/order_details.dart';
@@ -27,7 +28,7 @@ class FormsCard extends StatelessWidget {
           ],
           color: white),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.fromLTRB(17.w, 12.2.h, 19.w, 8.h),
         child: Column(
           children: [
             Row(
@@ -35,7 +36,9 @@ class FormsCard extends StatelessWidget {
               children: [
                 Text(
                   'فتح باب التسجيل للتطوع في المجال الزراعي',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: FontSize.s18,
+                      fontWeight: FontWeightManager.semiBold),
                 ),
                 Image.asset('assets/images/meen.png')
               ],
@@ -44,16 +47,25 @@ class FormsCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Icon(Icons.calendar_month_outlined),
+                SizedBox(
+                  width: 5.w,
+                ),
                 Text(
                   'قبل 5 دقائق ',
-                  style: TextStyle(color: mainColor, fontSize: 18.sp),
+                  style: TextStyle(
+                    color: mainColor,
+                    fontSize: FontSize.s18,
+                  ),
                 ),
               ],
             ),
             Text(
               'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد',
               maxLines: 2,
-              style: TextStyle(color: HexColor('#757575'), fontSize: 18.sp),
+              style: TextStyle(
+                color: HexColor('#757575'),
+                fontSize: FontSize.s18,
+              ),
             ),
             Center(
               child: ElevatedButton(

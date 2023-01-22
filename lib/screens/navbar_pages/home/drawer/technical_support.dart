@@ -19,7 +19,10 @@ class TechnicalSupport extends StatelessWidget {
               AppBarr(
                 title: 'الدعم الفني',
                 actions: GestureDetector(
-                  child: Icon(Icons.arrow_forward),
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    size: 20,
+                  ),
                   onTap: () => Get.back(),
                 ),
                 leading: SizedBox(),

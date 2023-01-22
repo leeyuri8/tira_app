@@ -4,8 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tira_app/constants/colors.dart';
-import 'package:tira_app/constants/font_manager.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 import 'package:tira_app/controllers/emergancy_controller.dart';
 import 'package:tira_app/screens/navbar_pages/home/emergancy/emer_details_card.dart';
 import 'package:tira_app/widgets/appbar.dart';
@@ -23,7 +23,10 @@ class EmergancyDetails extends StatelessWidget {
       AppBarr(
         title: "إنذارات الحرائق",
         actions: GestureDetector(
-          child: Icon(Icons.arrow_forward),
+          child: Icon(
+            Icons.arrow_forward_ios,
+            size: 20,
+          ),
           onTap: () => Get.back(),
         ),
         leading: SizedBox(
@@ -93,9 +96,11 @@ class EmergancyDetails extends StatelessWidget {
                             ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: HexColor('#F8E1DB'),
-                                    fixedSize: Size(140.w, 37.h),
+                                    fixedSize: Size(114.w, 37.h),
                                     side: BorderSide(
-                                        color: mainColor, width: 1.5.w)),
+                                        strokeAlign: StrokeAlign.inside,
+                                        color: mainColor,
+                                        width: 1.5.w)),
                                 onPressed: () {},
                                 child: Row(
                                   mainAxisAlignment:

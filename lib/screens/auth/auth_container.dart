@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/widgets/button.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
@@ -20,12 +20,12 @@ class AuthContainer extends StatelessWidget {
           color: white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.16),
-              blurRadius: 12,
+              color: Colors.black.withOpacity(0.15),
+              blurRadius: 15.r,
               offset: Offset(0, 5), // Shadow position
             ),
           ],
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(48.r),
         ),
         child: Padding(
             padding: EdgeInsets.only(

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-
 var mainColor = HexColor('#D9583B');
 var textColor = HexColor('#FFB1A0');
 var white = HexColor('#FFFFFF');

@@ -3,7 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 
 class CallContainer extends StatelessWidget {
   const CallContainer({super.key});
@@ -11,17 +12,17 @@ class CallContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(top: 15.0),
+        padding: EdgeInsets.only(top: 39.6.h),
         child: Container(
-          width: 232.w,
-          height: 232.h,
+          width: 232.51.w,
+          height: 232.51.h,
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: HexColor('#CBCBCB'),
               boxShadow: [
                 BoxShadow(
                   color: HexColor('#D9583B'),
-                  blurRadius: 15,
+                  blurRadius: 15.r,
                 )
               ]),
           child: Container(
@@ -30,7 +31,7 @@ class CallContainer extends StatelessWidget {
             decoration: BoxDecoration(
                 border: Border.all(
                     color: white,
-                    width: 0.75,
+                    width: 0.75.w,
                     strokeAlign: StrokeAlign.center,
                     style: BorderStyle.solid),
                 shape: BoxShape.circle,
@@ -44,8 +45,8 @@ class CallContainer extends StatelessWidget {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      blurRadius: 1.5,
-                      offset: Offset(0, 2),
+                      blurRadius: 1.5.r,
+                      offset: Offset(0, 2.h),
                       blurStyle: BlurStyle.outer),
                 ]),
             child: Container(
@@ -63,13 +64,13 @@ class CallContainer extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/images/phone.png',
-                    width: 45,
-                    height: 45,
+                    width: 79.h,
+                    height: 79.w,
                   ),
                   Text(
                     'إتصال بالموكيد',
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: FontSize.s22,
                         color: white,
                         fontWeight: FontWeight.bold),
                   ),

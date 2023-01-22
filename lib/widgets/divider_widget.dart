@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../constants/colors.dart';
+import '../core/color_manager.dart';
 
 class DividerWidget extends StatelessWidget {
   String image;

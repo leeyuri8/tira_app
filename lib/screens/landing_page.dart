@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/controllers/navbar_controller.dart';
 import 'package:tira_app/screens/navbar_pages/home/home.dart';
 import 'package:tira_app/screens/navbar_pages/myorders/my_orders.dart';
@@ -60,7 +60,7 @@ class LandingPage extends StatelessWidget {
                   Radius.circular(15.r),
                 ),
                 boxShadow: [
-                  BoxShadow(color: HexColor('#898989'), blurRadius: 10)
+                  BoxShadow(color: HexColor('#898989'), blurRadius: 10.r)
                 ]),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,

@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/widgets/button.dart';
 import 'package:tira_app/widgets/form_widget.dart';
 import 'package:tira_app/widgets/upload_widget.dart';
@@ -22,7 +22,7 @@ class CallDetails extends StatelessWidget {
         AppBarr(
           title: 'تقرير جديد',
           actions: GestureDetector(
-            child: Icon(Icons.arrow_forward),
+            child: Icon(Icons.arrow_forward_ios),
             onTap: () => Get.back(),
           ),
           leading: SizedBox(),

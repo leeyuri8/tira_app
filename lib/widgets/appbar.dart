@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 
 class AppBarr extends StatelessWidget {
   String title;
@@ -20,12 +21,14 @@ class AppBarr extends StatelessWidget {
       child: AppBar(
         backgroundColor: mainColor,
         elevation: 0,
-        toolbarHeight: 70,
+        toolbarHeight: 85.h,
         centerTitle: true,
         title: Text(
           title,
           style: TextStyle(
-              color: white, fontSize: 20.sp, fontWeight: FontWeight.bold),
+              color: white,
+              fontSize: 20.sp,
+              fontWeight: FontWeightManager.semiBold),
         ),
         leading: leading,
         actions: [

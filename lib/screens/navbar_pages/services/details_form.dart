@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/widgets/appbar.dart';
 import 'package:tira_app/widgets/button.dart';
 import 'package:tira_app/widgets/container_body.dart';
