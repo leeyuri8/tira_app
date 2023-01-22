@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/change_pass.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/privacy_policy.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/settings.dart';
@@ -20,7 +21,6 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Drawer(
-        
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -51,7 +51,7 @@ class AppDrawer extends StatelessWidget {
                       'عبد الرحمن محمد الطيراوي',
                       style: TextStyle(
                           color: white,
-                          fontSize: 18.sp,
+                          fontSize: FontSize.s18,
                           fontWeight: FontWeight.w900),
                     ),
                     ElevatedButton(

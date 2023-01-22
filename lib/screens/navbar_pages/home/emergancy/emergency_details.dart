@@ -11,8 +11,8 @@ import 'package:tira_app/screens/navbar_pages/home/emergancy/emer_details_card.d
 import 'package:tira_app/widgets/appbar.dart';
 import 'package:tira_app/widgets/container_body.dart';
 
-class EmergancyDetails extends StatelessWidget {
-  const EmergancyDetails({super.key});
+class EmergencyDetails extends StatelessWidget {
+  const EmergencyDetails({super.key});
 
   @override
   Widget build(BuildContext context) {

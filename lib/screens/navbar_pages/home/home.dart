@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:tira_app/core/color_manager.dart';
@@ -10,23 +7,15 @@ import 'package:tira_app/controllers/navbar_controller.dart';
 import 'package:tira_app/screens/navbar_pages/home/call/call.dart';
 import 'package:tira_app/screens/navbar_pages/home/drawer/drawer.dart';
 import 'package:tira_app/screens/navbar_pages/home/search_screen.dart';
-import 'package:tira_app/screens/navbar_pages/myorders/my_orders.dart';
-import 'package:tira_app/screens/navbar_pages/notification/notifications.dart';
-import 'package:tira_app/screens/navbar_pages/profile.dart';
-import 'package:tira_app/screens/navbar_pages/reports/reports.dart';
-import 'package:tira_app/widgets/button.dart';
-import 'package:tira_app/widgets/divider_widget.dart';
 import 'package:tira_app/screens/navbar_pages/home/main_card.dart';
 import 'package:tira_app/widgets/call_container.dart';
-
-import '../../../widgets/navbar_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final NavBarController controller = Get.put(NavBarController());
+    // final NavBarController controller = Get.put(NavBarController());
 
     return Scaffold(
       drawer: AppDrawer(),
@@ -43,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               onTap: (() => Get.to(() => SearchScreen())),
               child: Icon(
                 Icons.search,
-                size: 25,
+                size: 22,
               ),
             ),
           ),
@@ -58,7 +47,11 @@ class HomeScreen extends StatelessWidget {
         )),
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
-            icon: Image.asset('assets/images/menu.png'),
+            icon: Image.asset(
+              'assets/images/menu.png',
+              height: 9.h,
+              width: 34.w,
+            ),
             onPressed: () => Scaffold.of(context).openDrawer(),
             tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
           );

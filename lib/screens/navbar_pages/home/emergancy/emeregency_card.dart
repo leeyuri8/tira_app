@@ -5,12 +5,12 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tira_app/core/color_manager.dart';
-import 'package:tira_app/screens/navbar_pages/home/emergancy/emergancy_details.dart';
+import 'package:tira_app/screens/navbar_pages/home/emergancy/emergency_details.dart';
 
-class EmergancyCards extends StatelessWidget {
+class EmergencyCards extends StatelessWidget {
   Caard emergancyCard;
 
-  EmergancyCards({
+  EmergencyCards({
     required this.emergancyCard,
     Key? key,
   }) : super(key: key);
@@ -57,20 +57,20 @@ class Caard {
 List<Caard> cards = <Caard>[
   Caard('assets/images/fire.png', 'إنذارات الحرائق', 'assets/images/back.png',
       () {
-    Get.to(() => EmergancyDetails());
+    Get.to(() => EmergencyDetails());
   }),
   Caard('assets/images/tornado.png', 'إنذارات الطقس و الفيضانات',
       'assets/images/back.png', () {
-    Get.to(() => EmergancyDetails());
+    Get.to(() => EmergencyDetails());
   }),
   Caard('assets/images/amb.png', 'إنذارات صحية', 'assets/images/back.png', () {
-    Get.to(() => EmergancyDetails());
+    Get.to(() => EmergencyDetails());
   }),
   Caard('assets/images/bo.png', 'إنذارات أمنية', 'assets/images/back.png', () {
-    Get.to(() => EmergancyDetails());
+    Get.to(() => EmergencyDetails());
   }),
   Caard('assets/images/mapp.png', 'المناطق الآمنة القريبة',
       'assets/images/back.png', () {
-    Get.to(() => EmergancyDetails());
+    Get.to(() => EmergencyDetails());
   }),
 ];

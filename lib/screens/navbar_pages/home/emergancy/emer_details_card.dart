@@ -23,9 +23,7 @@ class EmerDetailsCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.r),
           color: white,
           boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(88, 88, 88, 0.48),
-               blurRadius: 10.r)
+            BoxShadow(color: Color.fromRGBO(88, 88, 88, 0.48), blurRadius: 10.r)
           ]),
       child: Column(
         children: [

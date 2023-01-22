@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:tira_app/core/color_manager.dart';
+import 'package:tira_app/core/font_manager.dart';
 import 'package:tira_app/widgets/appbar.dart';
 import 'package:tira_app/widgets/container_body.dart';
 
@@ -57,8 +58,8 @@ class SearchScreen extends StatelessWidget {
                     'assets/images/se.png',
                   ),
                   Text(
-                    'آسف, لا يوجد أي نتائج ',
-                    style: TextStyle(fontSize: 18.sp),
+                    'آسف، لا يوجد أي نتائج ',
+                    style: TextStyle(fontSize: FontSize.s18),
                   )
                 ],
               ))

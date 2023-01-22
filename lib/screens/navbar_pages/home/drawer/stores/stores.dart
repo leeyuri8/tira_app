@@ -18,7 +18,10 @@ class Stores extends StatelessWidget {
               AppBarr(
                 title: 'المحلات التجارية',
                 actions: GestureDetector(
-                  child: Icon(Icons.arrow_forward_ios),
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    size: 20,
+                  ),
                   onTap: () => Get.back(),
                 ),
                 leading: SizedBox(),

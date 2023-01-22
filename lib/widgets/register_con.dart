@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/core/font_manager.dart';
+import 'package:tira_app/core/strings_manager.dart';
 import 'package:tira_app/main.dart';
 import 'package:tira_app/routes/app_routes.dart';
 import 'package:tira_app/screens/navbar_pages/home/home.dart';
@@ -22,21 +23,21 @@ class RegisterCon extends StatelessWidget {
           TextField(
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
-              hintText: 'رقم الهاتف / الهوية الشخصية',
+              hintText: AppStrings.phoneNum,
               hintStyle: TextStyle(fontSize: FontSize.s16, color: secondColor),
             ),
           ),
           TextField(
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
-              hintText: 'الايميل الالكتروني',
+              hintText: AppStrings.emailHint,
               hintStyle: TextStyle(fontSize: FontSize.s16, color: secondColor),
             ),
           ),
           TextField(
             obscureText: true,
             decoration: InputDecoration(
-                hintText: 'كلمة المرور',
+                hintText: AppStrings.passHint,
                 hintStyle:
                     TextStyle(fontSize: FontSize.s16, color: secondColor),
                 suffixIcon: Icon(Icons.remove_red_eye_outlined)),
@@ -44,7 +45,7 @@ class RegisterCon extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 12, right: 130),
             child: Text(
-              'الأحكام والشروط',
+              AppStrings.rules,
               style: TextStyle(fontSize: FontSize.s14),
             ),
           ),
@@ -55,7 +56,7 @@ class RegisterCon extends StatelessWidget {
               onTap: () {
                 Get.offNamed(AppRoutes.home);
               },
-              buttonText: 'تسجيل حساب'),
+              buttonText: AppStrings.registerButton),
           const Padding(
             padding: EdgeInsets.only(top: 7.0),
             child: Text('أو'),

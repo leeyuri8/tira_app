@@ -4,13 +4,13 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tira_app/core/color_manager.dart';
-import 'package:tira_app/screens/navbar_pages/home/emergancy/emeregancy_card.dart';
+import 'package:tira_app/screens/navbar_pages/home/emergancy/emeregency_card.dart';
 import 'package:tira_app/widgets/appbar.dart';
 import 'package:tira_app/widgets/button.dart';
 import 'package:tira_app/widgets/container_body.dart';
 
-class Emergancy extends StatelessWidget {
-  const Emergancy({super.key});
+class Emergency extends StatelessWidget {
+  const Emergency({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class Emergancy extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   children: List.generate(
                     cards.length,
-                    (index) => EmergancyCards(emergancyCard: cards[index]),
+                    (index) => EmergencyCards(emergancyCard: cards[index]),
                   )),
               Container(
                 width: 250.w,

@@ -5,7 +5,8 @@ import 'package:tira_app/core/color_manager.dart';
 import 'package:tira_app/screens/navbar_pages/home/agenda/agenda.dart';
 import 'package:tira_app/screens/navbar_pages/home/citizen_service.dart';
 import 'package:tira_app/screens/navbar_pages/home/complaints.dart';
-import 'package:tira_app/screens/navbar_pages/home/emergancy/emergancy.dart';
+
+import 'package:tira_app/screens/navbar_pages/home/emergancy/emergency.dart';
 import 'package:tira_app/screens/navbar_pages/home/forms/forms.dart';
 import 'package:tira_app/screens/navbar_pages/home/news/news.dart';
 import 'package:tira_app/screens/navbar_pages/home/polls/polls.dart';
@@ -76,7 +77,7 @@ List<Category> categories = <Category>[
     Get.to(() => Agenda());
   }),
   Category('assets/images/warning-calendar.png', 'الإندار والطوارئ', () {
-    Get.to(() => Emergancy());
+    Get.to(() => Emergency());
   }),
   Category('assets/images/qqq.png', 'إعرض أفكارك', () {
     Get.to(() => ShowIdeas());
