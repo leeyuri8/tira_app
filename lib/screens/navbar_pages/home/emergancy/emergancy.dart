@@ -15,7 +15,7 @@ class Emergancy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(physics: NeverScrollableScrollPhysics(), children: [
+        body: Column(children: [
       AppBarr(
         title: 'الإنذار و الطوارئ',
         actions: GestureDetector(
@@ -25,42 +25,42 @@ class Emergancy extends StatelessWidget {
         leading: SizedBox(),
       ),
       ContainerBody(
-          widget: Padding(
-        padding: EdgeInsets.only(top: 40, left: 10, right: 10, bottom: 10),
-        child: Column(
-          children: [
-            ListView(
-                physics: AlwaysScrollableScrollPhysics(),
-                shrinkWrap: true,
-                children: List.generate(
-                  cards.length,
-                  (index) => EmergancyCards(emergancyCard: cards[index]),
-                )),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              width: 250.w,
-              height: 50.h,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.r),
-                  color: mainColor,
-                  boxShadow: [BoxShadow(color: mainColor, blurRadius: 10.r)]),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset('assets/images/position.png'),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'قم بإيجادي',
-                    style: TextStyle(fontSize: 22.sp, color: white),
-                  ),
-                ],
-              ),
-            )
-          ],
+          widget: Container(
+        margin: EdgeInsets.only(top: 60.h, left: 10, right: 10, bottom: 10),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ListView(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  children: List.generate(
+                    cards.length,
+                    (index) => EmergancyCards(emergancyCard: cards[index]),
+                  )),
+              Container(
+                width: 250.w,
+                height: 50.h,
+                margin: EdgeInsets.only(top: 90.h),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25.r),
+                    color: mainColor,
+                    boxShadow: [BoxShadow(color: mainColor, blurRadius: 10.r)]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/position.png'),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'قم بإيجادي',
+                      style: TextStyle(fontSize: 22.sp, color: white),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ))
     ]));

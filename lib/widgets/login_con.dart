@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:tira_app/constants/colors.dart';
 import 'package:tira_app/routes/app_routes.dart';
 import 'package:tira_app/widgets/button.dart';
 
@@ -17,35 +18,31 @@ class LoginCon extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          const Padding(
-              padding: EdgeInsets.only(top: 8),
-              child: TextField(
-                keyboardType: TextInputType.number,
-                decoration:
-                    InputDecoration(hintText: 'رقم الهاتف / الهوية الشخصية'),
-              )),
-          const Padding(
-              padding: EdgeInsets.only(top: 8),
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    hintText: 'كلمة المرور',
-                    suffixIcon: Icon(Icons.remove_red_eye_outlined)),
-              )),
-          const Padding(
-            padding: EdgeInsets.only(top: 10, right: 120),
-            child: Text('هل نسيت كلمة المرور؟'),
+          TextField(
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              hintText: 'رقم الهاتف / الهوية الشخصية',
+              hintStyle: TextStyle(fontSize: 15.sp, color: secondColor),
+            ),
           ),
-          SizedBox(
-            height: 10.h,
+          TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+                hintText: 'كلمة المرور',
+                hintStyle: TextStyle(fontSize: 15.sp, color: secondColor),
+                suffixIcon: Icon(Icons.remove_red_eye_outlined)),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 8.5.h, right: 120),
+            child: Text('هل نسيت كلمة المرور؟'),
           ),
           AuthButton(
               onTap: () {
                 Get.toNamed(AppRoutes.check1);
               },
               buttonText: 'تسجيل الدخول'),
-          const Padding(
-            padding: EdgeInsets.only(top: 7.0),
+          Padding(
+            padding: EdgeInsets.only(top: 44.h, bottom: 44.h),
             child: Text('أو'),
           ),
           Row(

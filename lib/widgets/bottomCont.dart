@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BottomContainer extends StatelessWidget {
   const BottomContainer({super.key});
@@ -8,10 +9,13 @@ class BottomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(left: 230),
+        margin: EdgeInsets.only(left: 215.5.w),
         child: Image.asset(
+          
           'assets/images/e.png',
-          scale: 1.3,
+          width: 251.68.w,
+          height: 138.51.h,
+         
         ));
   }
 }

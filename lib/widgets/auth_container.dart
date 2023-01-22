@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tira_app/constants/colors.dart';
 import 'package:tira_app/widgets/button.dart';
 import 'package:toggle_switch/toggle_switch.dart';
@@ -27,7 +28,8 @@ class AuthContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
         ),
         child: Padding(
-            padding: const EdgeInsets.only(top: 30, right: 30, left: 30),
+            padding: EdgeInsets.only(
+                left: 33.h, top: 70.h, right: 33.w, bottom: 40.h),
             child: column));
   }
 }

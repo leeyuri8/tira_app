@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:tira_app/constants/colors.dart';
 import 'package:tira_app/main.dart';
 import 'package:tira_app/routes/app_routes.dart';
 import 'package:tira_app/screens/navbar_pages/home/home.dart';
@@ -17,31 +18,33 @@ class RegisterCon extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          const Padding(
-              padding: EdgeInsets.only(top: 8),
-              child: TextField(
-                keyboardType: TextInputType.number,
-                decoration:
-                    InputDecoration(hintText: 'رقم الهاتف / الهوية الشخصية'),
-              )),
-          const Padding(
-              padding: EdgeInsets.only(top: 8),
-              child: TextField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(hintText: 'الايميل الالكتروني'),
-                
-              )),
-          const Padding(
-              padding: EdgeInsets.only(top: 8),
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    hintText: 'كلمة المرور',
-                    suffixIcon: Icon(Icons.remove_red_eye_outlined)),
-              )),
-          const Padding(
+          TextField(
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              hintText: 'رقم الهاتف / الهوية الشخصية',
+              hintStyle: TextStyle(fontSize: 15.sp, color: secondColor),
+            ),
+          ),
+          TextField(
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              hintText: 'الايميل الالكتروني',
+              hintStyle: TextStyle(fontSize: 15.sp, color: secondColor),
+            ),
+          ),
+          TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+                hintText: 'كلمة المرور',
+                hintStyle: TextStyle(fontSize: 15.sp, color: secondColor),
+                suffixIcon: Icon(Icons.remove_red_eye_outlined)),
+          ),
+          Padding(
             padding: EdgeInsets.only(top: 12, right: 130),
-            child: Text('الأحكام والشروط'),
+            child: Text(
+              'الأحكام والشروط',
+              style: TextStyle(fontSize: 14.sp),
+            ),
           ),
           SizedBox(
             height: 10.h,
@@ -63,7 +66,6 @@ class RegisterCon extends StatelessWidget {
               Image.asset('assets/images/facebook.png')
             ],
           ),
-          
         ],
       ),
     );

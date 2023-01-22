@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:tira_app/constants/colors.dart';
+import 'package:tira_app/screens/navbar_pages/home/emergancy/emergancy_details.dart';
 
 class EmergancyCards extends StatelessWidget {
   Caard emergancyCard;
@@ -25,22 +27,20 @@ class EmergancyCards extends StatelessWidget {
           boxShadow: const [
             BoxShadow(color: Color.fromRGBO(88, 88, 88, 0.48), blurRadius: 10)
           ]),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Image.asset(emergancyCard.image),
-          Text(
+      child: ListTile(
+          contentPadding:
+              EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+          leading: Image.asset(emergancyCard.image),
+          title: Text(
             emergancyCard.title,
             style: TextStyle(
               fontSize: 22.sp,
               color: mainColor,
             ),
           ),
-          GestureDetector(
+          trailing: GestureDetector(
               onTap: emergancyCard.onPressed,
-              child: Image.asset(emergancyCard.back)),
-        ],
-      ),
+              child: Image.asset(emergancyCard.back))),
     );
   }
 }
@@ -57,14 +57,20 @@ class Caard {
 List<Caard> cards = <Caard>[
   Caard('assets/images/fire.png', 'إنذارات الحرائق', 'assets/images/back.png',
       () {
-        
-      }),
+    Get.to(() => EmergancyDetails());
+  }),
   Caard('assets/images/tornado.png', 'إنذارات الطقس و الفيضانات',
-      'assets/images/back.png', () {}),
-  Caard(
-      'assets/images/amb.png', 'إنذارات صحية', 'assets/images/back.png', () {}),
-  Caard(
-      'assets/images/bo.png', 'إنذارات أمنية', 'assets/images/back.png', () {}),
+      'assets/images/back.png', () {
+    Get.to(() => EmergancyDetails());
+  }),
+  Caard('assets/images/amb.png', 'إنذارات صحية', 'assets/images/back.png', () {
+    Get.to(() => EmergancyDetails());
+  }),
+  Caard('assets/images/bo.png', 'إنذارات أمنية', 'assets/images/back.png', () {
+    Get.to(() => EmergancyDetails());
+  }),
   Caard('assets/images/mapp.png', 'المناطق الآمنة القريبة',
-      'assets/images/back.png', () {}),
+      'assets/images/back.png', () {
+    Get.to(() => EmergancyDetails());
+  }),
 ];
